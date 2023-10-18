@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "zenodo_download"
+version = "0.1.0"
+authors = [
+  { name="Younhun Kim", email="ykim78@bwh.harvard.edu" },
+]
+description = "An executable for downloading all files from a single zenodo record."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'tqdm',
+    'click',
+    'requests'
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/gibsonlab/zenodo_download"
+"Bug Tracker" = "https://github.com/gibsonlab/zenodo_download/issues"
+
+
+[project.scripts]
+zenodo_download = "zenodo_download.download:main"
