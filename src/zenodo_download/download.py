@@ -44,6 +44,7 @@ def zenodo_download_all(record_id: str, out_dir: Path):
                 continue  # skip this record.
             else:
                 print(f"File {out_path.name} exists, but checksums do not match. Redownloading.")
+                out_path.unlink()
 
         done = False
         while not done:
